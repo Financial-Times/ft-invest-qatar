@@ -1,0 +1,37 @@
+{
+	"name": "ft-ida",
+	"version": "0.1.0",
+	"private": true,
+	"cacheDirectories": [
+		".next/cache"
+	],
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"export": "next export",
+		"start": "node server.js",
+		"lint": "next lint",
+		"heroku-postbuild": "yarn run build"
+	},
+	"dependencies": {
+		"@financial-times/o-tracking": "^4.2.0",
+		"framer-motion": "^5.5.5",
+		"gsap": "^3.9.0",
+		"next": "12.0.7",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-ga": "^3.3.0",
+		"react-gtm-module": "^2.0.11",
+		"react-parallax": "^3.3.0",
+		"react-spring": "^9.3.2",
+		"react-youtube": "^7.13.1",
+		"styled-components": "^5.3.3",
+		"swiper": "^6.7.5",
+		"typewriter-effect": "^2.18.2"
+	},
+	"devDependencies": {
+		"babel-plugin-styled-components": "^1.13.2",
+		"eslint": "7.29.0",
+		"eslint-config-next": "11.0.1"
+	}
+}
