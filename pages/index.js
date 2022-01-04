@@ -24,6 +24,8 @@ export default function Home({ articleData }) {
 		FtAnalytics();
 	}, []);
 
+
+
 	return (
 		<>
 			<Head>
@@ -33,7 +35,7 @@ export default function Home({ articleData }) {
 
 			<ArticleContainer>
 				{articleData.map((article, i) => {
-					return <ArticleItem key={i} data={article} />;
+					return <ArticleItem key={i} data={article} pos={i}  />;
 				})}
 			</ArticleContainer>
 		</>
