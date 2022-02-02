@@ -5,40 +5,81 @@ import { device } from "~/config/utils";
 
 const Container = styled.div`
   display: flex;
-  background-color: #f8f8f8;
-  margin-bottom: 100px;
+  flex-direction: column-reverse;
+  margin-bottom: 40px;
+
   &:nth-child(odd) {
   }
 
-  &:nth-child(even) {
-    flex-direction: row-reverse;
+  @media ${device.tablet} {
+    flex-direction: row;
+    margin-bottom: 100px;
+    background-color: #f8f8f8;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
   }
 `;
 
 const Content = styled.div`
   position: relative;
-  padding: 30px;
+  padding: 15px;
+  max-width: 100%;
+  flex-basis: 100%;
+  background-color: #f8f8f8;
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f8f8;
+    top: -20%;
+    z-index: -1;
+    left: 0;
+  }
 
   @media ${device.tablet} {
     max-width: 45%;
     flex-basis: 45%;
+    padding: 30px;
+
+    &:after{
+      display: none;
+    }
+    [data-even="false"] & {
+      padding-left: 75px;
+    }
+  }
+
+  @media ${device.laptop} {
+    [data-even="false"] & {
+      padding-left: 95px;
+    }
   }
 }
-
-  [data-even="false"] & {
-    padding-left: 95px;
-  }
+ 
 `;
 
 const ImageContainer = styled.div`
   max-width: 55%;
-  flex-basis: 55%;
+  flex-basis: 100%;
   position: relative;
+  right: -50%;
+  transform: translateX(-50%);
   padding-bottom: 40.67%;
-  margin-right: 45px;
 
-  [data-even="false"] & {
-    margin-right: -45px;
+  @media ${device.tablet} {
+    flex-basis: 55%;
+    margin-right: 45px;
+    right: initial;
+    transform: initial;
+
+    [data-even="false"] & {
+      margin-right: -45px;
+    }
   }
 
   span {
@@ -48,8 +89,10 @@ const ImageContainer = styled.div`
   img {
     object-fit: cover;
     object-position: center center;
-    top: -25% !important;
-    width: calc(100% - 50px) !important;
+    max-width: 55% !important;
+    @media ${device.tablet} {
+      top: -25% !important;
+      width: calc(100% - 50px) !important;
   }
 `;
 
@@ -57,12 +100,31 @@ const ContentTopicWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: "Lora", serif;
   font-size: 10px;
+  padding-left: 20px;
   padding-bottom: 10px;
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #8a1538;
+    transform: rotate(315deg);
+  }
 
   @media ${device.tablet} {
     margin-bottom: 30px;
+    background-color: transparent;
   }
 
   &:after {
@@ -87,19 +149,24 @@ const ContentReadTime = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  min-height: 220px;
+  min-height: 280px;
+
+  @media ${device.laptop} {
+    min-height: 220px;
+  }
 `;
 
 const ContentTitle = styled.div`
   font-family: "Lora", serif;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
   color: #333333;
   margin-bottom: 30px;
 
   @media ${device.tablet} {
     font-size: 18px;
+    font-weight: 600;
   }
 
   @media ${device.laptop} {
@@ -109,6 +176,7 @@ const ContentTitle = styled.div`
 const ContentDesc = styled.div`
   font-family: "Lora", serif;
   line-height: 1.2;
+  margin-bottom: 20px;
 
   @media ${device.tablet} {
     font-size: 14px;
@@ -119,20 +187,67 @@ const ContentDesc = styled.div`
   }
 `;
 const ContentCta = styled.div`
-  position: absolute;
-  bottom: 5px;
-  right: 50%;
-  transform: translateX(50%);
   background-color: #8a1538;
   padding: 10px 15px;
+  display: table;
+  margin: 0 auto;
   a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 13px;
+    color: white;
   }
 
+  svg {
+    margin-top: 5px;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: translate(20px);
+      transition: all 0.5s ease;
+    }
+  }
+
+  @media ${device.tablet} {
+    display: initial;
+    margin: initial;
+    position: absolute;
+    bottom: 5px;
+    transform: translateX(50%);
+
+    [data-even="false"] & {
+      right: 40%;
+    }
+
+    [data-even="true"] & {
+      right: 50%;
+    }
+  }
   @media ${device.laptop} {
     padding: 20px 25px;
+  }
+`;
+
+const PlayButton = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border-radius: 50%;
+  backdrop-filter: blur(7px);
+  display: grid;
+  place-content: center;
+  color: white;
+  transform: translate(50%, -70%);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+  @media ${device.laptop} {
+    height: 145px;
+    width: 145px;
+    font-size: 18px;
   }
 `;
 
@@ -154,30 +269,30 @@ const ArticleItem = ({ data, pos }) => {
         <ContentWrapper>
           <ContentTitle>{data.metaData.title}</ContentTitle>
           <ContentDesc>{data.metaData.desc}</ContentDesc>
-          <ContentCta>
-            <Link href={`/article/`} passHref>
-              <a>
-                CTA goes here
-                <>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17.549"
-                    height="12"
-                    viewBox="0 0 17.549 12"
-                  >
-                    <path
-                      id="Path_543"
-                      data-name="Path 543"
-                      d="M6.643,17.291,11.734,12.2a.9.9,0,1,0-1.278-1.278L6.909,14.468V.909a.909.909,0,0,0-1.818,0V14.461L1.544,10.914A.9.9,0,0,0,.266,12.192l5.091,5.091a.919.919,0,0,0,1.286.007Z"
-                      transform="translate(0 12) rotate(-90)"
-                      fill="#fff"
-                    />
-                  </svg>
-                </>
-              </a>
-            </Link>
-          </ContentCta>
         </ContentWrapper>
+        <ContentCta>
+          <Link href={`/article/`} passHref>
+            <a>
+              CTA goes here
+              <>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.549"
+                  height="12"
+                  viewBox="0 0 17.549 12"
+                >
+                  <path
+                    id="Path_543"
+                    data-name="Path 543"
+                    d="M6.643,17.291,11.734,12.2a.9.9,0,1,0-1.278-1.278L6.909,14.468V.909a.909.909,0,0,0-1.818,0V14.461L1.544,10.914A.9.9,0,0,0,.266,12.192l5.091,5.091a.919.919,0,0,0,1.286.007Z"
+                    transform="translate(0 12) rotate(-90)"
+                    fill="#fff"
+                  />
+                </svg>
+              </>
+            </a>
+          </Link>
+        </ContentCta>
       </Content>
       <ImageContainer>
         <Image
@@ -185,6 +300,11 @@ const ArticleItem = ({ data, pos }) => {
           layout="fill"
           alt="articleImage"
         />
+        {data.metaData.hasVideo ? (
+          <Link href={`/article/`} passHref>
+            <PlayButton>Play</PlayButton>
+          </Link>
+        ) : null}
       </ImageContainer>
     </Container>
   );

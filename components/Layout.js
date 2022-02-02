@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
-import Footer from './Footer';
-import Header from './Header';
-import Disclaimer from './Disclaimer';
-import BTTButton from './BTTButton';
-import { device } from '~/config/utils';
+import PropTypes from "prop-types";
+import { createGlobalStyle } from "styled-components";
+import Footer from "./Footer";
+import Header from "./Header";
+import Disclaimer from "./Disclaimer";
+import BTTButton from "./BTTButton";
+import { device } from "~/config/utils";
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -81,21 +81,24 @@ const GlobalStyles = createGlobalStyle`
       color: black;
     }
   }
+  
+  .o-footer {
+	  margin: 0;
+  }
           
 `;
 export default function Page({ children }) {
-	return (
-		<>
-			<GlobalStyles />
-			<Header />
-			<Disclaimer />
-			{children}
-			<BTTButton />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <GlobalStyles />
+      <Header />
+      <Disclaimer />
+      {children}
+      <Footer />
+    </>
+  );
 }
 
 Page.propTypes = {
-	children: PropTypes.any,
+  children: PropTypes.any,
 };
