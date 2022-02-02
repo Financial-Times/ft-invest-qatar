@@ -84,6 +84,7 @@ const ShareIconContainer = styled.div`
     margin-right: 15px;
   }
 `;
+const ShareImage = styled.img``;
 
 const shareIcons = [
   {
@@ -152,7 +153,7 @@ const Share = () => {
           {shareIcons.map((icon, i) => {
             return (
               <a key={i} href={icon.src}>
-                <img src={icon.src} alt="share icon" />
+                <ShareImage src={icon.src} alt="share icon" />
               </a>
             );
           })}

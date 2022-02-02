@@ -326,7 +326,7 @@ const Disclaimer = () => {
     <DisclaimerContainer>
       <DisclaimerWrapper>
         <DisclaimerClient>
-          <Link href="/"> IDA </Link>
+          <Link href="/"> Invest Qatar </Link>
         </DisclaimerClient>
         <DisclaimerPc>
           <DisclaimerPcText>Partner Content</DisclaimerPcText>
@@ -397,8 +397,8 @@ const Disclaimer = () => {
           <DisclaimerCloseImg src="https://ft.amicuscrm.co.uk/dist/static/pcHeader/close.svg" />
         </DisclaimerClose>
         <DisclaimerContentWrapper>
-          This content was paid for by IDA and produced in partnership with the
-          Financial Times Commercial department
+          This content was paid for by Invest Qataryar and produced in
+          partnership with the Financial Times Commercial department
         </DisclaimerContentWrapper>
       </DisclaimerContent>
     </DisclaimerContainer>

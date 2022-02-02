@@ -55,7 +55,7 @@ const HeroImage = ({ imgSrc, title, subtitle }) => {
   return (
     <Container>
       <ImageWrapper>
-        <Image layout={"fill"} src={imgSrc} />
+        <Image layout={"fill"} src={imgSrc} alt={"heroImage"} />
       </ImageWrapper>
       <Content>
         <Title>{title}</Title>

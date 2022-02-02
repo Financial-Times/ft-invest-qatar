@@ -66,7 +66,11 @@ export default class MyDocument extends Document {
             href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-header,o-fonts,o-fonts-assets,o-footer,o-typography,o-cookie-message"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin={"true"}
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap"
             rel="stylesheet"
