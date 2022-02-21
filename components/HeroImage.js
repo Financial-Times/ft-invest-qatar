@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 import { device } from "~/config/utils";
 
@@ -15,12 +14,16 @@ const ImageWrapper = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
-  img {
+  video {
     object-fit: cover;
     object-position: center center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 `;
 
@@ -46,6 +49,9 @@ const Title = styled.div`
 const SubTitle = styled.div`
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 0 auto;
   @media ${device.tablet} {
     font-size: 22px;
   }
@@ -55,7 +61,26 @@ const HeroImage = ({ imgSrc, title, subtitle }) => {
   return (
     <Container>
       <ImageWrapper>
-        <Image layout={"fill"} src={imgSrc} alt={"heroImage"} />
+        <video
+          autoPlay
+          loop
+          muted
+          poster="https://ft.com/partnercontent/invest-qatar/hero.jpg"
+          id="background"
+        >
+          <source
+            src="https://ft.com/partnercontent/invest-qatar/hero.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://ft.com/partnercontent/invest-qatar/hero.webm"
+            type="video/webm"
+          />
+          <source
+            src="https://ft.com/partnercontent/invest-qatar/hero.ogv"
+            type="video/ogg"
+          />
+        </video>
       </ImageWrapper>
       <Content>
         <Title>{title}</Title>

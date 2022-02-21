@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
 import styled from "styled-components";
 
 import Metadata from "~/components/Metadata";
-import { ARTICLE_URL, FEATURED_URL, HOMEPAGE_URL } from "~/config/utils";
-import { device } from "~/config/utils";
+import { ARTICLE_URL, device } from "~/config/utils";
 import FtAnalytics from "~/config/FtAnalytics";
 import FtEvents from "~/config/FtEvents";
 import ArticleItem from "~/components/ArticleItem";
@@ -41,9 +40,10 @@ export default function Home({ articleData }) {
         <Metadata title={true} data={null} />
       </Head>
       <HeroImage
-        title={"Title goes here"}
-        subtitle={"Standfirst goes here"}
-        imgSrc={"https://picsum.photos/1920/1080"}
+        title={"Qatar: the next chapter"}
+        subtitle={
+          "As it diversifies from oil and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?"
+        }
       />
       <ArticleWrapper>
         <ArticleTitle>Explore our content</ArticleTitle>
@@ -57,6 +57,7 @@ export default function Home({ articleData }) {
     </>
   );
 }
+
 export async function getStaticProps(context) {
   const fetchArticles = await fetch(ARTICLE_URL);
 
