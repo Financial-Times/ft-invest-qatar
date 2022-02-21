@@ -48,7 +48,6 @@ const Title = styled.div`
 `;
 const SubTitle = styled.div`
   font-weight: bold;
-  text-transform: uppercase;
   line-height: 1.4;
   max-width: 700px;
   margin: 0 auto;
