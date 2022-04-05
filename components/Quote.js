@@ -11,11 +11,26 @@ const Container = styled.div`
 	flex-direction: column;
 	@media ${device.tablet} {
 		padding: 60px 150px;
+		margin: 124px auto;
 	}
 `;
 
 const Wrapper = styled.div`
 	display: flex;
+	position: relative;
+	width: 100%;
+	&:first-child {
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #707070;
+		}
+	}
 `;
 
 const AuthorContainer = styled.div`
@@ -25,10 +40,39 @@ const AuthorContainer = styled.div`
 	flex-direction: column;
 `;
 
-const Author = styled.div``;
-const Job = styled.div``;
-const QuoteMark = styled.div``;
-const QuoteContainer = styled.div``;
+const Author = styled.div`
+	line-height: 1.3;
+	font-family: 'Lora', serif;
+	@media ${device.tablet} {
+		font-size: 32px;
+	}
+`;
+const Job = styled.div`
+	line-height: 1.3;
+	font-family: 'Lora', serif;
+	color: #8a1538;
+	@media ${device.tablet} {
+		font-size: 24px;
+	}
+`;
+
+const QuoteMark = styled.div`
+	@media ${device.tablet} {
+		margin-right: 30px;
+		padding-bottom: 15px;
+	}
+`;
+
+const QuoteContainer = styled.div`
+	line-height: 1.3;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-weight: 400;
+	@media ${device.tablet} {
+		font-size: 44px;
+		padding-top: 30px;
+	}
+`;
 
 const Quote = ({ data }) => {
 	const { author, job, quote } = data;
