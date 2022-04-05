@@ -6,7 +6,27 @@ import styled from 'styled-components';
 
 import FtAnalytics from '~/config/FtAnalytics';
 import FtEvents from '~/config/FtEvents';
-import { ARTICLE_URL } from '~/config/utils';
+import { ARTICLE_URL, device } from '~/config/utils';
+import ArticleHero from '~/components/ArticleHero';
+import BreadCrumbs from '~/components/Breadcrumbs';
+import ArticleInfo from '~/components/ArticleInfo';
+import Content from '~/components/Content';
+import Quote from '~/components/Quote';
+import PullOut from '~/components/PullOut';
+
+const TitleContainer = styled.div`
+	@media ${device.tablet} {
+	}
+`;
+
+const ArticleTitle = styled.h1`
+	@media ${device.tablet} {
+	}
+`;
+const ArticleStandFirst = styled.div`
+	@media ${device.tablet} {
+	}
+`;
 
 export default function ArticlePage({ post, related }) {
 	useEffect(() => {
@@ -24,7 +44,6 @@ export default function ArticlePage({ post, related }) {
 			const re = new RegExp(`${cookieKey}=([^;]+)`);
 			const match = document.cookie.match(re);
 			if (!match) {
-				// cookie stasis or no cookie found
 				return false;
 			}
 			return decodeURIComponent(match[1]);
@@ -42,7 +61,6 @@ export default function ArticlePage({ post, related }) {
 				console.log(cookieButton);
 				cookieButton.addEventListener('click', (e) => {
 					permutive.consent({ opt_in: true, token: 'behaviouraladsOnsite:on' });
-					console.log('clicked');
 				});
 			}
 		});
@@ -61,7 +79,9 @@ export default function ArticlePage({ post, related }) {
           window.googletag = window.googletag || {}, window.googletag.cmd = window.googletag.cmd || [], window.googletag.cmd.push(function () { if (0 === window.googletag.pubads().getTargeting("permutive").length) { var g = window.localStorage.getItem("_pdfps"); window.googletag.pubads().setTargeting("permutive", g ? JSON.parse(g) : []) } });
           window.permutive.addon('web', {
             page: {
-              type: 'Partner Content ${post.metaData.hasVideo ? 'Video' : 'Article'}',
+              type: 'Partner Content ${
+								post.metaData.hasVideo ? 'Video' : 'Article'
+							}',
             }
           });`,
 					}}
@@ -71,6 +91,35 @@ export default function ArticlePage({ post, related }) {
 					src="https://e1c3fd73-dd41-4abd-b80b-4278d52bf7aa.edge.permutive.app/e1c3fd73-dd41-4abd-b80b-4278d52bf7aa-web.js"
 				></Script>
 			</Head>
+			<ArticleHero data={post.metaData.articleImage} />
+			<BreadCrumbs data={post.metaData.title} />
+			<TitleContainer>
+				<ArticleTitle>{post.metaData.title}</ArticleTitle>
+				<ArticleStandFirst>{post.metaData.desc}</ArticleStandFirst>
+			</TitleContainer>
+			<ArticleInfo
+				data={{ date: post.metaData.publicationDate, time: post.time }}
+			/>
+			<main className="main" id="content">
+				{post.content.map((el) => {
+					switch (el.type) {
+						case 'content':
+							return <Content key={el.id} id={el.id} data={el.data} />;
+						case 'quote':
+							return <Quote key={el.id} data={el.data} id={el.id} />;
+						case 'pullOut':
+							return <PullOut key={el.id} data={el.data} id={el.id} />;
+						// case 'contentWithImage':
+						// 	return <ContentWithImage key={el.id} data={el.data} />;
+						// case 'cta':
+						// 	return <ArticleCta key={el.id} data={el.data} />;
+						// case 'hotels':
+						// 	return <Hotels key={el.id} data={el.data} />;
+						// case 'video':
+						// 	return <VideoEl key={el.id} data={el.data} />;
+					}
+				})}
+			</main>
 		</>
 	);
 }
