@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 		[data-right='true'] & {
 			margin-left: auto;
 		}
-		max-width: 270px;
+		max-width: 300px;
 	}
 `;
 
@@ -33,8 +33,13 @@ const Content = styled.div`
 const Title = styled.div`
 	line-height: 1.1;
 	font-weight: 600;
-	font-size: 50px;
+	font-size: 44px;
 	margin-bottom: 24px;
+
+	@media ${device.tablet} {
+		font-size: 50px;
+	}
+
 	@media ${device.laptopL} {
 		font-size: 56px;
 		margin-bottom: 24px;
@@ -42,23 +47,29 @@ const Title = styled.div`
 `;
 
 const Stat = styled.div`
-	height: 145px;
-	width: 145px;
+	height: 360px;
+	width: 360px;
 	background-color: #b79769;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 100%;
 	margin: 0 auto;
+
+	@media ${device.tablet} {
+		height: 145px;
+		width: 145px;
+	}
+
 	@media ${device.laptopL} {
 		margin-bottom: 24px;
 	}
 	sup {
-		font-size: 30px;
+		font-size: 15px;
 	}
 	p {
 		color: white;
-		font-size: 32px;
+		font-size: 72px;
 
 		@media ${device.laptopL} {
 			font-size: 32px;
@@ -70,9 +81,19 @@ const Stat = styled.div`
 const Text = styled.div`
 	color: #8a1538;
 	font-size: 24px;
+	max-width: 500px;
+	margin: 0 auto;
+
+	p {
+		color: #8a1538;
+	}
+
+	@media ${device.tablet} {
+	}
 
 	@media ${device.laptopL} {
-		font-size: 24px;
+		max-width: initial;
+		margin: initial;
 	}
 `;
 

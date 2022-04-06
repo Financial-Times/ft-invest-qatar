@@ -233,23 +233,23 @@ const ContentCta = styled.div`
 `;
 
 const PlayButton = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  border-radius: 50%;
-  backdrop-filter: blur(7px);
-  display: grid;
-  place-content: center;
-  color: white;
-  transform: translate(50%, -70%);
-  text-transform: uppercase;
-  cursor: pointer;
-}
-  @media ${device.laptop} {
-    height: 145px;
-    width: 145px;
-    font-size: 18px;
-  }
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	border-radius: 50%;
+	backdrop-filter: blur(7px);
+	display: grid;
+	place-content: center;
+	color: white;
+	transform: translate(50%, -70%);
+	text-transform: uppercase;
+	cursor: pointer;
+
+	@media ${device.laptop} {
+		height: 145px;
+		width: 145px;
+		font-size: 18px;
+	}
 `;
 
 const ArticleItem = ({ data, pos }) => {
