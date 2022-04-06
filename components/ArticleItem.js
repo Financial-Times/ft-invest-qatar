@@ -23,44 +23,42 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  position: relative;
-  padding: 15px;
-  max-width: 100%;
-  flex-basis: 100%;
-  background-color: #f8f8f8;
+	position: relative;
+	padding: 15px;
+	max-width: 100%;
+	flex-basis: 100%;
+	background-color: #f8f8f8;
 
-  &:after{
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #f8f8f8;
-    top: -20%;
-    z-index: -1;
-    left: 0;
-  }
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: #f8f8f8;
+		top: -20%;
+		z-index: -1;
+		left: 0;
+	}
 
-  @media ${device.tablet} {
-    max-width: 45%;
-    flex-basis: 45%;
-    padding: 30px;
+	@media ${device.tablet} {
+		max-width: 45%;
+		flex-basis: 45%;
+		padding: 30px;
 
-    &:after{
-      display: none;
-    }
-    [data-even="false"] & {
-      padding-left: 75px;
-    }
-  }
+		&:after {
+			display: none;
+		}
+		[data-even='false'] & {
+			padding-left: 75px;
+		}
+	}
 
-  @media ${device.laptop} {
-    [data-even="false"] & {
-      padding-left: 95px;
-    }
-  }
-}
- 
+	@media ${device.laptop} {
+		[data-even='false'] & {
+			padding-left: 95px;
+		}
+	}
 `;
 
 const ImageContainer = styled.div`
