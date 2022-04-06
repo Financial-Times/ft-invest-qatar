@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import { createGlobalStyle } from "styled-components";
-import Footer from "./Footer";
-import Header from "./Header";
-import Disclaimer from "./Disclaimer";
-import BTTButton from "./BTTButton";
-import { device } from "~/config/utils";
+import PropTypes from 'prop-types';
+import { createGlobalStyle } from 'styled-components';
+import Footer from './Footer';
+import Header from './Header';
+import Disclaimer from './Disclaimer';
+import BTTButton from './BTTButton';
+import { device } from '~/config/utils';
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Lora', serif;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
@@ -41,7 +41,6 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
   button {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   .o-footer {
@@ -50,23 +49,40 @@ const GlobalStyles = createGlobalStyle`
 
   
   h1 {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Lora', serif;
     color: #009b3a;
     line-height: 1.3;
     font-weight: 400;
     font-size: 25px;
     margin-top: 0;
     padding-top: 10px;
+    color: #8A1538;
+    text-align: center;
+    margin-bottom: 30px;
 
     @media ${device.tablet} {
-        font-size: 30px;
+        font-size: 56px;
       }
   }
+
+  h2 {
+   color: #8A1538;
+   font-family: 'Lora', serif;
+   font-size: 36px;
+   line-height: 1.3;
+
+     @media ${device.tablet} {
+        font-size: 56px;
+      }
+
+
+  }
   p {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Lora', serif;
     color: #333333;
     line-height: 1.6;
     font-weight: 400;
+    font-size: 20px;
   }
 
   main {
@@ -88,17 +104,17 @@ const GlobalStyles = createGlobalStyle`
           
 `;
 export default function Page({ children }) {
-  return (
-    <>
-      <GlobalStyles />
-      <Header />
-      <Disclaimer />
-      {children}
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<GlobalStyles />
+			<Header />
+			<Disclaimer />
+			{children}
+			<Footer />
+		</>
+	);
 }
 
 Page.propTypes = {
-  children: PropTypes.any,
+	children: PropTypes.any,
 };

@@ -9,10 +9,10 @@ const ContentWrapper = styled.div`
 
 const ContentText = styled.div`
 	&.dropCap:first-letter {
-		font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+		font-family: 'Lora', serif;
 		float: left;
 		line-height: 0.65;
-		color: #f48c6b;
+		color: #8a1538;
 		font-size: 80px;
 		margin: 10px 20px;
 		@media ${device.tablet} {

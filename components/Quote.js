@@ -9,6 +9,8 @@ const Container = styled.div`
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
+	padding: 60px 0;
+
 	@media ${device.tablet} {
 		padding: 60px 150px;
 		margin: 124px auto;
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
 	display: flex;
 	position: relative;
 	width: 100%;
+	padding: 0 10px;
 	&:first-child {
 		&:after {
 			content: '';
@@ -43,6 +46,8 @@ const AuthorContainer = styled.div`
 const Author = styled.div`
 	line-height: 1.3;
 	font-family: 'Lora', serif;
+	font-size: 20px;
+
 	@media ${device.tablet} {
 		font-size: 32px;
 	}
@@ -51,12 +56,21 @@ const Job = styled.div`
 	line-height: 1.3;
 	font-family: 'Lora', serif;
 	color: #8a1538;
+	font-size: 12px;
+
 	@media ${device.tablet} {
 		font-size: 24px;
 	}
 `;
 
 const QuoteMark = styled.div`
+	margin-right: 15px;
+	padding-bottom: 5px;
+
+	svg {
+		height: 70px;
+		width: 70px;
+	}
 	@media ${device.tablet} {
 		margin-right: 30px;
 		padding-bottom: 15px;
@@ -68,9 +82,11 @@ const QuoteContainer = styled.div`
 	font-family: 'Lora', serif;
 	font-style: italic;
 	font-weight: 400;
+	font-size: 28px;
+	padding-top: 30px;
+
 	@media ${device.tablet} {
 		font-size: 44px;
-		padding-top: 30px;
 	}
 `;
 

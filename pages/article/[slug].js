@@ -20,11 +20,23 @@ const TitleContainer = styled.div`
 `;
 
 const ArticleTitle = styled.h1`
+	text-align: left;
+	padding: 0 10px;
 	@media ${device.tablet} {
+		text-align: center;
 	}
 `;
 const ArticleStandFirst = styled.div`
+	font-weight: 500;
+	max-width: 864px;
+	margin: 0 auto;
+	line-height: 1.5;
+	padding: 0 10px;
+	font-size: 16px;
+
 	@media ${device.tablet} {
+		font-size: 28px;
+		padding: initial;
 	}
 `;
 

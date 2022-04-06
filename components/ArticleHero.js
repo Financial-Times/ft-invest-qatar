@@ -6,8 +6,12 @@ const Container = styled.div`
 	position: relative;
 	display: block;
 	width: 100%;
+	padding-bottom: 60%;
+	margin-bottom: 16px;
+
 	@media ${device.tablet} {
 		padding-bottom: 30%;
+		margin-bottom: 24px;
 	}
 
 	img {
