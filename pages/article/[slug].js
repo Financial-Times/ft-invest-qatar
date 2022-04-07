@@ -13,6 +13,9 @@ import ArticleInfo from '~/components/ArticleInfo';
 import Content from '~/components/Content';
 import Quote from '~/components/Quote';
 import PullOut from '~/components/PullOut';
+import VideoEl from '~/components/Video';
+import CTA from '~/components/CTA';
+import Related from '~/components/Related';
 
 const TitleContainer = styled.div`
 	@media ${device.tablet} {
@@ -121,17 +124,14 @@ export default function ArticlePage({ post, related }) {
 							return <Quote key={el.id} data={el.data} id={el.id} />;
 						case 'pullOut':
 							return <PullOut key={el.id} data={el.data} id={el.id} />;
-						// case 'contentWithImage':
-						// 	return <ContentWithImage key={el.id} data={el.data} />;
-						// case 'cta':
-						// 	return <ArticleCta key={el.id} data={el.data} />;
-						// case 'hotels':
-						// 	return <Hotels key={el.id} data={el.data} />;
-						// case 'video':
-						// 	return <VideoEl key={el.id} data={el.data} />;
+						case 'video':
+							return <VideoEl key={el.id} data={el.data} />;
+						case 'cta':
+							return <CTA key={el.id} data={el.data} />;
 					}
 				})}
 			</main>
+			<Related data={related} />
 		</>
 	);
 }

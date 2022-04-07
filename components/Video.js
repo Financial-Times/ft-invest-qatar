@@ -7,7 +7,7 @@ const VideoContainer = styled.div`
 `;
 
 const VideoWrapper = styled.div`
-	max-width: 695px;
+	max-width: 864px;
 	padding: 0 10px;
 	margin: 0 auto;
 	aspect-ratio: 1.5;
@@ -99,10 +99,10 @@ const VideoEl = ({ data }) => {
 		<VideoContainer>
 			<VideoWrapper ref={videoRef}>
 				<YouTube
-					videoId={data.youTubeId}
+					videoId={data.videoID}
 					opts={opts}
-					onStateChange={event => onPlayerStateChange(event)}
-          onPlayerReady={event => onPlayerReady(event)}
+					onStateChange={(event) => onPlayerStateChange(event)}
+					onPlayerReady={(event) => onPlayerReady(event)}
 				/>
 			</VideoWrapper>
 		</VideoContainer>

@@ -1,1 +1,234 @@
-[]
+[
+	{
+		"id": "where-investment-makes-sense",
+		"time": 3,
+		"metaData": {
+			"title": "Qatar: where investment makes sense.",
+			"desc": "With its political and economic stability, world-class infrastructure, and access to growing markets, Qatar has become a magnet for foreign direct investment",
+			"contentType": "article",
+			"publicationDate": "2021-10-25",
+			"campaignName": "Burst 1",
+			"advertiserName": "Marriott Group",
+			"primaryIndustryAdvertiser": "Hotels",
+			"contentAuthor": "AlphaGrid",
+			"brandedContent": true,
+			"contentStyle": "brand focussed",
+			"primaryTopic": "Life_&_Arts",
+			"secondaryTopic": "Travel",
+			"adbookId": 314383,
+			"hasVideo": false,
+			"videoStyle": null,
+			"pageDesignType": "bespoke",
+			"articleImage": "https://ft.com/partnercontent/invest-qatar/A1/hero.jpg",
+			"articleUrl": "https://investqatar.ft.com//article/where-investment-makes-sense"
+		},
+		"content": [
+			{
+				"id": 0,
+				"type": "content",
+				"data": {
+					"hasDropCap": true,
+					"content": "<p>Qatar will be in the spotlight of the world&rsquo;s media when the 2022 FIFA World Cup opens in Doha in November. Thanks to its unique position in the world&rsquo;s energy markets and its recent strategic efforts to create a business and investment-friendly environment, though, the Gulf state is already accustomed to attracting attention.</p><p>The World Bank has predicted that the Qatari economy will grow by 4.8 per cent this year, bolstered in part by its hosting of the FIFA World Cup. And, in November 2021, S&amp;P Global Ratings affirmed Qatar&rsquo;s long- and short-term foreign and local currency sovereign credit ratings at AA-/A-1+, with a stable outlook.</p><p>According to the World Economic Forum&rsquo;s Global Competitive Index, Qatar already possesses the second most competitive economy in the Arab world, while the US-based Global Entrepreneurship and Development Institute ranks its economy as the Arab world&rsquo;s most entrepreneurial. In 2020, Qatar was ranked third in the World Bank&rsquo;s Doing Business report for impact of tax on business.</p><p>While Qatar is often associated with headline-grabbing investments of its own &ndash; the Qatar Investment Authority is reported to have strategic assets worth $366bn under management &ndash; the country has also worked hard in recent years to increase its appeal to international entrepreneurs and investors.</p>"
+				}
+			},
+			{
+				"id": 1,
+				"type": "pullOut",
+				"data": {
+					"title": "In 2020, Qatar was ranked",
+					"stat": "<p>3<sup>rd</sup></p>",
+					"text": "<p>in the <em>World Bank’s Doing Business</em> report for impact of tax on business.</p>",
+					"right": true,
+					"top": 10
+				}
+			},
+			{
+				"id": 2,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<h2>Attractive to investment</h2><p>Prior to the global economic crisis triggered by the Covid-19 pandemic, foreign direct investment into Qatar generally followed an upward trend, buoyed by the country&rsquo;s political and financial stability, its highly efficient corporate tax system, and the absence of personal income tax.</p><p>According to the UNCTAD 2021 World Investment Report, Qatar&rsquo;s total stock of FDI stood at $28.6bn in 2020, with the largest inflows of FDI coming from the US, Japan, South Korea and Singapore. In recent years, Qatar has also introduced a series of reforms that are designed to create a competitive, pro-business environment while assisting in the country&rsquo;s transformation.&nbsp;</p>"
+				}
+			},
+			{
+				"id": 3,
+				"type": "quote",
+				"data": {
+					"quote": "Our focus is on attracting quality investments that will allow us to build a knowledge economy.",
+					"author": "Sheikh Ali Alwaleed Al-Thani",
+					"job": "CEO of Investment Promotion Agency Qatar"
+				}
+			},
+			{
+				"id": 4,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<p>In 2016, Qatar became the first Gulf Cooperation Council (GCC) country to implement a Data Protection Law, and has also introduced reforms to its foreign investment and foreign property ownership laws. Since 2019, these have allowed up to 100 per cent foreign ownership of businesses in most sectors alongside real estate in newly designated areas. In 2020, the government also enacted legislation to regulate and promote public-private partnerships, and introduced a new minimum wage law the following year.</p><p>&ldquo;Our focus is on attracting quality investments that will allow us to build a knowledge economy, that will allow us to diversify away from hydrocarbons, and also allow our people to develop the skills that will help them thrive,&rdquo; says Sheikh Ali Alwaleed Al-Thani, Chief Executive Officer of Investment Promotion Agency (IPA) Qatar.</p><p>The IPA Qatar works closely with businesses and investors to understand their objectives, connect them with the right strategic partners, stakeholders and resources, and support them through the investment process. &ldquo;FDI also plays a really important role in the diffusion of knowledge,&rdquo; Mr Al-Thani adds. &ldquo;When you attract highly skilled workers and enterprises in innovative sectors, their tacit knowledge diffuses throughout society.&rdquo;</p><h2>A major new digital hub</h2><p>As Microsoft Qatar&rsquo;s Country Manager Lana Khalaf explains, the tech giant&rsquo;s decision to host its latest cloud services in Qatar is a case in point. Microsoft has operated there for more than 15 years, and announced in December 2019 its intention to open its first data centre cloud region on the peninsula. Microsoft is also launching its complete cloud computing platform in Qatar, starting with Microsoft Azure, followed by Office 365, Dynamics 365 and Power Platform.</p>"
+				}
+			},
+			{
+				"id": 5,
+				"type": "quote",
+				"data": {
+					"quote": "We are […] empowering people across different demographics with the digital skills they need to thrive in the jobs of the future”.",
+					"author": "Lana Khalaf",
+					"job": "Country Manager of Microsoft Qatar "
+				}
+			},
+			{
+				"id": 6,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<p>According to Khalaf, the data centre will further establish Qatar as a major digital hub, driving innovation for a range of comprehensive cloud services, from SAP to VMware to the internet of things and artificial intelligence. “For companies who wish to expand into the region, the data centre’s cloud services will help lower costs and remove entry barriers, while enabling global companies who want to offer low latency services in the region to host their services closer to their customer,” says Khalaf.</p>"
+				}
+			},
+			{
+				"id": 7,
+				"type": "pullOut",
+				"data": {
+					"title": "Qatar’s Nation Skilling Program will train",
+					"stat": "<p>50,000</p>",
+					"text": "<p>people across all demographics by 2025.</p>",
+					"right": false,
+					"top": 80
+				}
+			},
+			{
+				"id": 8,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<h2>Developing local talent</h2><p>The increased adoption of cloud services is predicted to contribute $3bn to the Qatari economy by 2024, while generating more than 24,200 new jobs. &ldquo;To make this investment sustainable, we need world-class talent, world-class technology and world-class infrastructure,&rdquo; Khalaf continues. &ldquo;That&rsquo;s why we are contributing to developing the talent pool in the country and empowering people across different demographics with the digital skills they need to thrive in the jobs of the future.&rdquo;</p><p>To this end, Microsoft worked with the Ministry of Communications and Information Technology to establish Qatar&rsquo;s National Skilling Program, aimed at training 50,000 people across all demographics by 2025. As part of this, the Digital Center of Excellence has been launched in partnership with Elev8, offering role-based learning tracks to skill, upskill and reskill current and future workforce on AI, cybersecurity, cloud computing and data science. The programme will also partner with INSEAD, HEC Paris in Qatar and MIT xPRO.</p><p>As well as accelerating Qatar&rsquo;s financial and technological transformation, the development of local talent is also central to recent agreements signed between IPA Qatar and UBS, Credit Suisse and FLYR Labs.</p><p>In October 2021, IPA Qatar and Credit Suisse signed an agreement regarding the establishment of a Global Technology Innovation Centre in Doha, which will act as a repository of knowledge, and as a resource pool for multiple business areas within Credit Suisse. The centre will also develop local talent, and support innovation research and development through specialised programmes.</p><p>In January, UBS confirmed plans to open a Business Solutions Hub in the country, in addition to the newly created UBS Wealth Management Office in Doha. While expanding UBS operations in Qatar, and supporting its growth in the Middle East, the Hub will also employ up to 200 digital experts.</p><p>Following this, in February, IPA Qatar and FLYR Labs agreed to launch the first artificial intelligence hub for the transportation sector in the Middle East and GCC, creating dozens of jobs in Qatar across FLYR&rsquo;s engineering and advisory organisations.</p><p>With the development of these facilities and Microsoft&rsquo;s data centres operational in time for the FIFA World Cup, Qatar will be able to present itself as one of the most digitally advanced nations in the world, capable of delivering multiple secure, cloud-based services, from digitally enhanced business solutions to smart, connected stadiums, intelligent transit and smart city urban developments.</p>"
+				}
+			},
+			{
+				"id": 9,
+				"type": "cta",
+				"data": {
+					"title": "Qatar’s Nation Skilling Program will train",
+					"stat": "<p>50,000 people</p>",
+					"text": "<p>across all demographics by 2025.</p>",
+					"right": true,
+					"top": 80
+				}
+			}
+		]
+	},
+	{
+		"id": "financing-the-future",
+		"time": 3,
+		"metaData": {
+			"title": "Qatar: financing the future",
+			"desc": "A thriving financial services sector is central to Qatar’s long-term plans for diversification and digitalisation, and the creation of an innovative knowledge economy",
+			"contentType": "article",
+			"publicationDate": "2021-10-25",
+			"campaignName": "Burst 1",
+			"advertiserName": "Marriott Group",
+			"primaryIndustryAdvertiser": "Hotels",
+			"contentAuthor": "AlphaGrid",
+			"brandedContent": true,
+			"contentStyle": "brand focussed",
+			"primaryTopic": "Life_&_Arts",
+			"secondaryTopic": "Travel",
+			"adbookId": 314383,
+			"hasVideo": false,
+			"videoStyle": null,
+			"pageDesignType": "bespoke",
+			"articleImage": "https://ft.com/partnercontent/invest-qatar/A2/hero.jpg",
+			"articleUrl": "https://investqatar.ft.com/article/financing-the-future"
+		},
+		"content": [
+			{
+				"id": 0,
+				"type": "content",
+				"data": {
+					"hasDropCap": true,
+					"content": "<p>Ranked second only to the Gulf state's hydro-carbon industry, Qatar&rsquo;s financial services sector is a major contributor to its economy and reflects the sector&rsquo;s prominence in shaping Qatar&rsquo;s economy as one of the world&rsquo;s most stable, resilient and competitive. Continuous economic growth has seen demand for financial services growing accordingly, cementing the country&rsquo;s position as one of the major financial hubs in western Asia and beyond.</p><p>Two of the key institutional players in Qatar&rsquo;s financial services ecosystem are the Qatar Financial Markets Authority (QFMA), which started operations in 2007, and the Qatar Stock Exchange (QSE). QFMA is an independent regulatory authority responsible for supervising the state&rsquo;s financial markets, granting licences to practise financial activities, and conducting inspections and investigations to ensure compliance with applied laws and regulations.</p>"
+				}
+			},
+			{
+				"id": 1,
+				"type": "pullOut",
+				"data": {
+					"title": "QSE attracted net foreign inflows of",
+					"stat": "<p>$2.5bn</p>",
+					"text": "<p>and was ranked as the best-performing exchange among emerging and developed markets worldwide.</p>",
+					"right": true,
+					"top": 10
+				}
+			},
+			{
+				"id": 2,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<p>Established in 1995, the QSE is the first in the region and one of the pioneering exchanges globally to promote environmental, social and corporate governance (ESG) standards. In 2018, QSE attracted net foreign inflows of $2.5bn, and was ranked as the best-performing exchange among emerging and developed markets worldwide.</p>"
+				}
+			},
+			{
+				"id": 3,
+				"type": "quote",
+				"data": {
+					"quote": "Financial technologies have grown to become a true disruptive force",
+					"author": "Abdulrahman Hesham Al Sowaidi",
+					"job": "Acting CEO of Qatar Development Bank"
+				}
+			},
+			{
+				"id": 4,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<p>Alongside a robust network of regulation, the Qatari government has worked hard to attract international partners to help promote the growth and depth of the financial services sector; these include global investment banks and financial services firms such as Credit Suisse, HSBC and UBS, as well as the professional services firm Ernst &amp; Young. Their presence in Qatar is testimony to the country&rsquo;s determination to provide an attractive landscape for foreign investment and a matrix of opportunities for contracts in the public and private sectors.&nbsp;</p>"
+				}
+			},
+			{
+				"id": 5,
+				"type": "pullOut",
+				"data": {
+					"title": "Wamda revealed that",
+					"stat": "<p>88%</p>",
+					"text": "<p>of fintech entrepreneurs in the MENA region were either seeking or already benefiting from partnerships with financial institutions.</p>",
+					"right": false,
+					"top": 80
+				}
+			},
+			{
+				"id": 6,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<h2>Fostering Innovation</h2><p>As a key part of Qatar&rsquo;s financial services sector, fintech also plays a fundamental role in Qatar&rsquo;s wider strategic plan to promote innovation while diversifying its economy. This strategy is actively promoted by the Qatar FinTech Hub (QFTH), the second largest fintech venture investor in the Middle East and north Africa (Mena) region in the first quarter of 2021. The Hub is an initiative managed by Qatar Development Bank (QDB) under the leadership of Qatar Central Banks (QCB).</p><p>&ldquo;Financial technologies have grown to become a true disruptive force and a crucial tool to achieve the long-term development for Qatar&rsquo;s financial industry and consequently the country&rsquo;s economy,&rdquo; says Abdulrahman Hesham Al Sowaidi, Qatar Development Bank&rsquo;s Acting Chief Executive Officer. &ldquo;It is critical for us in Qatar to have a robust financial sector powered by advanced technologies that cater to the needs of the continuously evolving markets, because it is essentially required for the foundation of our targeted knowledge-based economy.&rdquo;</p><p>In line with Qatar&rsquo;s National FinTech Strategy, QFTH aims to provide a competitive business ecosystem to local and international fintechs to encourage them to consider making Qatar the base for their regional and global operations. A recent survey by start-up platform Wamda revealed that 88 per cent of fintech entrepreneurs in the MENA region were either seeking or already benefiting from partnerships with financial institutions. Since its inception, QFTH has brought in some 1,800 applications from across the globe, graduating more than 50 fintechs with an estimated valuation of $500mn.</p><h2>Enabling Change</h2><p>In February, the Qatari fintech startup Karty announced its plans to launch an app-based, digital-first, prepaid mobile wallet in the Gulf state and beyond. Describing itself as a &ldquo;lifestyle solution that offers a unified experience while complementing basic banking products&rdquo;, Karty has been developed to suit individuals who struggle to analyse their spending and budget, especially when engaged in peer-to-peer payments with friends and family, and who often have multiple bank accounts or cards.</p><p>The app is being launched in partnership with the Silicon Valley-based i2c Inc, a global provider of payment and banking solutions, and is also backed by Visa, QFTH, Qatar Financial Centre (QFC), QDB and Qatar Foundation. In 2021, Karty was the winner of the 2021 Qatar Science &amp; Technology Park Accelerator programme.</p><p>Once it is fully operational, Karty will be regulated by the QCB&rsquo;s FinTech Regulatory Sandbox, a testbed that allows startups and other fintech initiatives to conduct &ldquo;live&rdquo; experiments under regulatory supervision. As such, Karty is just one of the latest steps in a process that began with the formation of the Qatar National FinTech Taskforce in 2017, comprising the QCB, QDB and QFC, which aimed to promote a thriving fintech ecosystem.</p><h2>A Knowledge-Based Economy</h2><p>The growth of QFC, which launched in 2005 to provide legal, taxation and business services to local and international companies, is another marker of the growing maturity of the country&rsquo;s financial services sector. In 2019, business registration grew by a third, with more than 800 fintech, IT, tax and investment consulting firms on the platform. What is more, QFC surpassed its goal to register 1,000 firms by the end of 2022 a year early, recording more than 1,280 registrations at the end of December 2021.</p>"
+				}
+			},
+
+			{
+				"id": 7,
+				"type": "quote",
+				"data": {
+					"quote": "Qatar Financial Centre is an integral part of Qatar’s strategic initiative to [...] transform Doha into a leading global financial and commercial capital.",
+					"author": "Yousuf Mohamed Al-Jaida",
+					"job": "CEO of Qatar Financial Centre"
+				}
+			},
+			{
+				"id": 8,
+				"type": "content",
+				"data": {
+					"hasDropCap": false,
+					"content": "<p>&ldquo;As a main licensing platform and fintech enabler for local and international firms in Qatar, the QFC has increased the number of fintech activities being conducted by companies while introducing a FinTech Services Providers Licence,&rdquo; explains the QFC Chief Executive Officer, Yousuf Mohamed Al-Jaida. &ldquo;This allows firms in areas including cybersecurity, application programming interfaces (API), cloud computing, blockchain technologies and artificial intelligence to operate as non-regulated entities.&rdquo;</p><p>A home-grown mobile payment startup that offers greater convenience for consumers and merchants alike by enabling digital payments using proprietary QR codes, SkipCash is one of the many initiatives to have benefited from QFCs assistance. Launched in December 2020, it now partners with more than 250 local brands in various sectors, has some 26,000 users and has exceeded 9,000 successful payment transactions. Next are plans to explore markets across the Gulf region.</p><p>&ldquo;Our strategy is aligned with the Qatar National Vision 2030,&rdquo; says Mr Al-Jaida. &ldquo;Qatar Financial Centre is an integral part of Qatar&rsquo;s strategic initiative to build, develop and diversify the business environment and transform Doha into a leading global financial and commercial capital.&rdquo;</p>"
+				}
+			},
+
+			{
+				"id": 9,
+				"type": "cta",
+				"data": {
+					"url": "Qatar’s Nation Skilling Program will train"
+				}
+			}
+		]
+	}
+]
