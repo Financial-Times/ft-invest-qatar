@@ -9,7 +9,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"export": "next export",
-		"start": "node server.js",
+		"start": "next start",
 		"lint": "next lint",
 		"heroku-postbuild": "yarn run build"
 	},
