@@ -3,6 +3,44 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { device } from '~/config/utils';
 
+const ContentCta = styled.div`
+	background-color: #8a1538;
+	padding: 10px 15px;
+	display: table;
+	margin: 0 auto;
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 13px;
+		color: white;
+	}
+
+	svg {
+		margin-top: 5px;
+		transition: all 0.5s ease;
+	}
+
+	@media ${device.tablet} {
+		display: initial;
+		margin: initial;
+		position: absolute;
+		bottom: 5px;
+		transform: translateX(50%);
+
+		[data-even='false'] & {
+			right: 40%;
+		}
+
+		[data-even='true'] & {
+			right: 50%;
+		}
+	}
+	@media ${device.laptop} {
+		padding: 20px 25px;
+	}
+`;
+
 const Container = styled.div`
 	display: flex;
 	flex-direction: column-reverse;
@@ -18,6 +56,21 @@ const Container = styled.div`
 
 		&:nth-child(even) {
 			flex-direction: row-reverse;
+		}
+	}
+
+	&:hover {
+		img[alt='articleImage'] {
+			top: 0 !important;
+			transform: scale(1.2);
+			transition: top 0.3s ease-in-out, transform 0.3s 0.5s ease-in-out;
+		}
+
+		${ContentCta} {
+			svg {
+				transform: translate(20px);
+				transition: all 0.5s ease;
+			}
 		}
 	}
 `;
@@ -68,6 +121,7 @@ const ImageContainer = styled.div`
 	right: -50%;
 	transform: translateX(-50%);
 	padding-bottom: 40.67%;
+	overflow: hidden;
 
 	@media ${device.tablet} {
 		flex-basis: 55%;
@@ -91,6 +145,7 @@ const ImageContainer = styled.div`
 		@media ${device.tablet} {
 			top: -25% !important;
 			width: calc(100% - 50px) !important;
+			transition: top 0.5s ease-in-out;
 		}
 	}
 `;
@@ -185,50 +240,6 @@ const ContentDesc = styled.div`
 		font-size: 18px;
 	}
 `;
-const ContentCta = styled.div`
-	background-color: #8a1538;
-	padding: 10px 15px;
-	display: table;
-	margin: 0 auto;
-	a {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 13px;
-		color: white;
-	}
-
-	svg {
-		margin-top: 5px;
-		transition: all 0.5s ease;
-	}
-
-	&:hover {
-		svg {
-			transform: translate(20px);
-			transition: all 0.5s ease;
-		}
-	}
-
-	@media ${device.tablet} {
-		display: initial;
-		margin: initial;
-		position: absolute;
-		bottom: 5px;
-		transform: translateX(50%);
-
-		[data-even='false'] & {
-			right: 40%;
-		}
-
-		[data-even='true'] & {
-			right: 50%;
-		}
-	}
-	@media ${device.laptop} {
-		padding: 20px 25px;
-	}
-`;
 
 const PlayButton = styled.div`
 	position: absolute;
@@ -272,7 +283,7 @@ const ArticleItem = ({ data, pos }) => {
 				<ContentCta>
 					<Link href={`/article/${data.id}`} passHref>
 						<a>
-							CTA goes here
+							Read More
 							<>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

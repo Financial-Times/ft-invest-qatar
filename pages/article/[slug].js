@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
@@ -17,7 +17,16 @@ import VideoEl from '~/components/Video';
 import CTA from '~/components/CTA';
 import Related from '~/components/Related';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Share from '~/components/Share';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const TitleContainer = styled.div`
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
 	@media ${device.tablet} {
 	}
 `;
@@ -27,6 +36,7 @@ const ArticleTitle = styled.h1`
 	padding: 0 10px;
 	@media ${device.tablet} {
 		text-align: center;
+		transform: translateX(-70vw);
 	}
 `;
 const ArticleStandFirst = styled.div`
@@ -40,10 +50,15 @@ const ArticleStandFirst = styled.div`
 	@media ${device.tablet} {
 		font-size: 28px;
 		padding: initial;
+		transform: translateX(70vw);
 	}
 `;
 
 export default function ArticlePage({ post, related }) {
+	const containerRef = useRef();
+	const titleRef = useRef();
+	const descRef = useRef();
+
 	useEffect(() => {
 		FtEvents();
 		FtAnalytics();
@@ -81,6 +96,26 @@ export default function ArticlePage({ post, related }) {
 		});
 	}, []);
 
+	useEffect(() => {
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: containerRef.current,
+				pin: false,
+				start: () => 'top 50%',
+				end: () => '200% bottom',
+				markers: true,
+				scrub: 1,
+				anticipatePin: 1,
+			},
+		});
+
+		tl.to(titleRef.current, { x: 0 }, 'label').to(
+			descRef.current,
+			{ x: 0 },
+			'label=-1'
+		);
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -108,9 +143,11 @@ export default function ArticlePage({ post, related }) {
 			</Head>
 			<ArticleHero data={post.metaData.articleImage} />
 			<BreadCrumbs data={post.metaData.title} />
-			<TitleContainer>
-				<ArticleTitle>{post.metaData.title}</ArticleTitle>
-				<ArticleStandFirst>{post.metaData.desc}</ArticleStandFirst>
+			<TitleContainer ref={containerRef}>
+				<ArticleTitle ref={titleRef}>{post.metaData.title}</ArticleTitle>
+				<ArticleStandFirst ref={descRef}>
+					{post.metaData.desc}
+				</ArticleStandFirst>
 			</TitleContainer>
 			<ArticleInfo
 				data={{ date: post.metaData.publicationDate, time: post.time }}
@@ -132,6 +169,7 @@ export default function ArticlePage({ post, related }) {
 				})}
 			</main>
 			<Related data={related} />
+			<Share />
 		</>
 	);
 }

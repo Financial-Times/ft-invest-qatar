@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 import { device } from '~/config/utils';
+import { useEffect, useRef } from 'react';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Container = styled.div`
 	max-width: 1300px;
@@ -85,15 +91,42 @@ const QuoteContainer = styled.div`
 	font-size: 28px;
 	padding-top: 30px;
 
+	.word {
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
 	@media ${device.tablet} {
 		font-size: 44px;
 	}
 `;
 
 const Quote = ({ data }) => {
+	const containerRef = useRef();
 	const { author, job, quote } = data;
+	const quoteArray = quote.split(' ');
+
+	useEffect(() => {
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: containerRef.current,
+				pin: false,
+				start: () => 'top 50%',
+				end: () => '120% bottom',
+				markers: true,
+				scrub: 1,
+				anticipatePin: 1,
+			},
+		});
+
+		tl.to([...containerRef.current.querySelectorAll('.word')], {
+			autoAlpha: 1,
+			stagger: 1,
+		});
+		tl.totalDuration(10);
+	}, []);
 	return (
-		<Container>
+		<Container ref={containerRef}>
 			<Wrapper>
 				<QuoteMark>
 					<svg
@@ -119,7 +152,15 @@ const Quote = ({ data }) => {
 				</AuthorContainer>
 			</Wrapper>
 			<Wrapper>
-				<QuoteContainer>{quote}</QuoteContainer>
+				<QuoteContainer>
+					{quoteArray.map((item, i) => {
+						return (
+							<span key={i} className="word">
+								{item}{' '}
+							</span>
+						);
+					})}
+				</QuoteContainer>
 			</Wrapper>
 		</Container>
 	);

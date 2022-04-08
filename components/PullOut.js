@@ -56,13 +56,10 @@ const Stat = styled.div`
 	border-radius: 100%;
 	margin: 0 auto;
 
-	@media ${device.tablet} {
-		height: 145px;
-		width: 145px;
-	}
-
 	@media ${device.laptopL} {
 		margin-bottom: 24px;
+		height: 145px;
+		width: 145px;
 	}
 	sup {
 		font-size: 15px;
