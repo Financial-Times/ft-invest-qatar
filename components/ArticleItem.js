@@ -281,7 +281,7 @@ const ArticleItem = ({ data, pos }) => {
 				<ContentCta>
 					<Link href={`/article/${data.id}`} passHref>
 						<a>
-							Read More
+							{data.metaData.hasVideo ? 'Watch Now' : 'Read More'}
 							<>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
