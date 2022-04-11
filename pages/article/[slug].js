@@ -21,6 +21,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Share from '~/components/Share';
 import Metadata from '~/components/Metadata';
+import Logo from '~/components/Logo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -170,6 +171,7 @@ export default function ArticlePage({ post, related }) {
 				})}
 			</main>
 			<Related data={related} />
+			<Logo />
 			<Share />
 		</>
 	);
