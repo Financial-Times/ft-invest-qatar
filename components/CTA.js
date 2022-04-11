@@ -34,6 +34,7 @@ const ContentCta = styled.div`
 	}
 
 	@media ${device.tablet} {
+		margin: 0 auto 0 0;
 	}
 	@media ${device.laptop} {
 		padding: 20px 25px;
