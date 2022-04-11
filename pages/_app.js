@@ -4,10 +4,10 @@ import Layout from '../components/Layout';
 import ReactGA from 'react-ga';
 
 function MyApp({ Component, pageProps, router }) {
-	ReactGA.initialize('UA-93924635-35');
+	ReactGA.initialize('UA-93924635-47');
 
 	useEffect(() => {
-		TagManager.initialize({ gtmId: 'GTM-T66ZTL5' });
+		TagManager.initialize({ gtmId: 'GTM-NSHPT4T' });
 	}, []);
 
 	useEffect(() => {
