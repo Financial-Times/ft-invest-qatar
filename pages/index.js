@@ -9,6 +9,7 @@ import FtEvents from '~/config/FtEvents';
 import ArticleItem from '~/components/ArticleItem';
 import HeroImage from '~/components/HeroImage';
 import Share from '~/components/Share';
+import Logo from '~/components/Logo';
 
 const ArticleContainer = styled.div`
 	max-width: 1220px;
@@ -81,6 +82,7 @@ export default function Home({ articleData }) {
 					})}
 				</ArticleContainer>
 			</main>
+			<Logo />
 			<Share />
 		</>
 	);
