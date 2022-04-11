@@ -20,6 +20,7 @@ import Related from '~/components/Related';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Share from '~/components/Share';
+import Metadata from '~/components/Metadata';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,9 +102,9 @@ export default function ArticlePage({ post, related }) {
 			scrollTrigger: {
 				trigger: containerRef.current,
 				pin: false,
-				start: () => 'top 50%',
+				start: () => '-20% 50%',
 				end: () => '200% bottom',
-				markers: true,
+				markers: false,
 				scrub: 1,
 				anticipatePin: 1,
 			},
@@ -119,9 +120,9 @@ export default function ArticlePage({ post, related }) {
 	return (
 		<>
 			<Head>
-				<title>{post.title}</title>
+				<title>{post.metaData.title}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				{/* <Metadata data={post.metaData} /> */}
+				<Metadata data={post.metaData} />
 				<Script
 					dangerouslySetInnerHTML={{
 						__html: `

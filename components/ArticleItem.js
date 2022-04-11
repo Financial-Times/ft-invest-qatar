@@ -203,8 +203,6 @@ const ContentReadTime = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-	min-height: 280px;
-
 	@media ${device.laptop} {
 		min-height: 220px;
 	}
@@ -270,7 +268,7 @@ const ArticleItem = ({ data, pos }) => {
 		<Container data-even={CheckInt(pos)}>
 			<Content>
 				<ContentTopicWrapper>
-					<ContentTopic>Topic goes here</ContentTopic>
+					<ContentTopic>{data.topic}</ContentTopic>
 					<ContentReadTime>
 						{data.metaData.hasVideo ? 'Watch' : 'Read'} time: {data.time}{' '}
 						minutes

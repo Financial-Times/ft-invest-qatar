@@ -22,8 +22,12 @@ const ArticleContainer = styled.div`
 const ArticleWrapper = styled.div``;
 const ArticleTitle = styled.div`
 	text-align: center;
+	font-size: 36px;
+	line-height: 1.3;
+	margin-bottom: 40px;
 	@media ${device.tablet} {
 		font-size: 50px;
+		margin-bottom: 0;
 	}
 `;
 
@@ -33,16 +37,38 @@ export default function Home({ articleData }) {
 		FtAnalytics();
 	}, []);
 
+	const metaData = {
+		title: 'Qatar: The Next Chapter',
+		desc: 'As it diversifies from its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?',
+		contentType: 'article',
+		publicationDate: '2022-03-31',
+		campaignName: 'Zenith Master of Chronograph',
+		advertiserName: 'Zenith',
+		primaryIndustryAdvertiser: 'Watches & Jewellery',
+		contentAuthor: 'external',
+		brandedContent: true,
+		contentStyle: 'brand focussed',
+		primaryTopic: 'Life_&_Arts',
+		secondaryTopic: 'Style',
+		adbookId: 354073,
+		hasVideo: true,
+		videoStyle: 'feature',
+		pageDesignType: 'bespoke',
+		articleImage: 'https://www.ft.com/partnercontent/zenith/poster.jpg',
+		articleUrl: 'https://investqatar.ft.com/',
+	};
+
 	return (
 		<>
 			<Head>
-				<title></title>
-				<Metadata title={true} data={null} />
+				<title>{metaData.title} - Financial Times</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<Metadata data={metaData} />
 			</Head>
 			<HeroImage
-				title={'Qatar: the next chapter'}
+				title={'Qatar: The Next Chapter'}
 				subtitle={
-					'As it diversifies from oil and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?'
+					'As it diversifies from its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?'
 				}
 			/>
 			<main className="main" id="content">

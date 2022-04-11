@@ -11,6 +11,7 @@ const ContentCta = styled.div`
 	background-color: #8a1538;
 	padding: 10px 15px;
 	display: table;
+	margin: 0 auto;
 	a {
 		display: flex;
 		flex-direction: column;
@@ -43,8 +44,13 @@ const CTA = ({ data }) => {
 	return (
 		<Container>
 			<ContentCta>
-				<a href={data.url}>
-					CTA goes here
+				<a
+					href={'https://invest.qa/'}
+					className="cta"
+					target={'_blank'}
+					rel="noreferrer"
+				>
+					Learn More
 					<>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

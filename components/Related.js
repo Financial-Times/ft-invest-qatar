@@ -7,10 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { device } from '~/config/utils';
 
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
-import { useRef } from 'react';
-
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const RelatedContainer = styled.div`
@@ -30,21 +26,39 @@ const SwiperPagination = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 0;
+	padding: 50px 0;
+	position: relative;
 
 	.swiper-pagination-bullet {
 		height: 10px;
-		width: 35px;
+		width: 14px;
 		border-radius: 10px;
 		margin: 0 5px;
-		background-color: #f8971d;
+		background-color: #b79769;
 		opacity: 0.8;
 		transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	.swiper-pagination-bullet-active {
-		background-color: #009b3a;
-		width: 55px;
+		height: 10px;
+		width: 21px;
+		background-color: #8a1538;
 		transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 55px;
+		height: 55px;
+		border: 1px solid #636364;
+		border-radius: 100%;
+
+		&:after {
+			font-size: 15px;
+			color: #636364;
+		}
+	}
+
+	.swiper-button-prev {
 	}
 `;
 
@@ -66,13 +80,7 @@ const RelatedWrapper = styled.div`
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
-
-	.swiper-button-next {
-		color: white;
-	}
-	.swiper-button-prev {
-		color: white;
-	}
+	overflow: hidden;
 `;
 
 const Container = styled.div`
@@ -84,10 +92,19 @@ const ImageContainer = styled.div`
 	display: block;
 	position: relative;
 	padding-bottom: 60%;
+	overflow: hidden;
+
+	&:hover {
+		img {
+			transform: scale(1.2);
+			transition: transform 0.5s ease-in-out;
+		}
+	}
 
 	img {
 		object-fit: cover;
 		object-position: center center;
+		transition: transform 0.5s ease-in-out;
 	}
 `;
 
@@ -102,6 +119,7 @@ const Title = styled.div`
 	font-family: 'Lora', serif;
 	font-size: 26px;
 	line-height: 1.2;
+	min-height: 94px;
 `;
 
 const ContentTopicWrapper = styled.div`
@@ -165,23 +183,19 @@ const Related = ({ data }) => {
 							el: '.swiper-pagination',
 							clickable: true,
 						}}
-						navigation
+						navigation={{
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						}}
 						breakpoints={{
-							960: {
+							1024: {
 								slidesPerView: 2,
-								spaceBetween: 10,
 							},
-							720: {
-								slidesPerView: 2,
-								spaceBetween: 10,
-							},
-							540: {
-								slidesPerView: 2,
-								spaceBetween: 10,
-							},
-							320: {
+							768: {
 								slidesPerView: 1,
-								spaceBetween: 10,
+							},
+							0: {
+								slidesPerView: 1,
 							},
 						}}
 					>
@@ -200,7 +214,7 @@ const Related = ({ data }) => {
 												</ImageContainer>
 												<ContentContainer>
 													<ContentTopicWrapper>
-														<ContentTopic>Topic goes here</ContentTopic>
+														<ContentTopic>{slide.topic}</ContentTopic>
 													</ContentTopicWrapper>
 													<Title>{slide.metaData.title}</Title>
 												</ContentContainer>
@@ -212,17 +226,11 @@ const Related = ({ data }) => {
 						))}
 					</Swiper>
 				</RelatedSwiper>
-				{/* <SwiperPagination>
+				<SwiperPagination>
 					<div className="swiper-pagination"></div>
+					<div className="swiper-button-next" />
+					<div className="swiper-button-prev" />
 				</SwiperPagination>
-				<div className="swiper-navigation">
-					<div ref={navNextRef} className="next">
-						Next
-					</div>
-					<div ref={navPrevRef} className="prev">
-						Prev
-					</div>
-				</div> */}
 			</RelatedWrapper>
 		</RelatedContainer>
 	);

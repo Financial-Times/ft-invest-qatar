@@ -6,7 +6,7 @@ const Container = styled.div`
 	position: relative;
 	display: block;
 	width: 100%;
-	padding-bottom: 60%;
+	padding-bottom: 80%;
 	margin-bottom: 16px;
 
 	@media ${device.tablet} {

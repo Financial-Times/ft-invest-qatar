@@ -113,7 +113,7 @@ const Quote = ({ data }) => {
 				pin: false,
 				start: () => 'top 50%',
 				end: () => '120% bottom',
-				markers: true,
+				markers: false,
 				scrub: 1,
 				anticipatePin: 1,
 			},

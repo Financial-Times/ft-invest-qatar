@@ -47,8 +47,8 @@ const Title = styled.div`
 `;
 
 const Stat = styled.div`
-	height: 360px;
-	width: 360px;
+	height: 300px;
+	width: 300px;
 	background-color: #b79769;
 	display: flex;
 	justify-content: center;
@@ -66,7 +66,7 @@ const Stat = styled.div`
 	}
 	p {
 		color: white;
-		font-size: 72px;
+		font-size: 100px;
 
 		@media ${device.laptopL} {
 			font-size: 32px;
