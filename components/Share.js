@@ -183,7 +183,7 @@ const Share = () => {
 					<ShareIconContainer>
 						{shareIcons.map((icon, i) => {
 							return (
-								<a key={i} href={icon.src}>
+								<a key={i} href={icon.link}>
 									<ShareImage src={icon.src} alt="share icon" />
 								</a>
 							);
