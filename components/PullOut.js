@@ -66,7 +66,7 @@ const Stat = styled.div`
 	}
 	p {
 		color: white;
-		font-size: 100px;
+		font-size: 80px;
 
 		@media ${device.laptopL} {
 			font-size: 32px;
