@@ -179,7 +179,7 @@ const Share = () => {
 			</TopWrapper>
 			<ShareWrapper>
 				<ShareIconWrapper>
-					<ShareTitle>Stay connected</ShareTitle>
+					<ShareTitle>Follow Invest Qatar</ShareTitle>
 					<ShareIconContainer>
 						{shareIcons.map((icon, i) => {
 							return (

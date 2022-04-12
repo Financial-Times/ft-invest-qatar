@@ -52,22 +52,6 @@ const CTA = ({ data }) => {
 					rel="noreferrer"
 				>
 					Learn More
-					<>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="17.549"
-							height="12"
-							viewBox="0 0 17.549 12"
-						>
-							<path
-								id="Path_543"
-								data-name="Path 543"
-								d="M6.643,17.291,11.734,12.2a.9.9,0,1,0-1.278-1.278L6.909,14.468V.909a.909.909,0,0,0-1.818,0V14.461L1.544,10.914A.9.9,0,0,0,.266,12.192l5.091,5.091a.919.919,0,0,0,1.286.007Z"
-								transform="translate(0 12) rotate(-90)"
-								fill="#fff"
-							/>
-						</svg>
-					</>
 				</a>
 			</ContentCta>
 		</Container>

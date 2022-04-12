@@ -40,7 +40,7 @@ export default function Home({ articleData }) {
 
 	const metaData = {
 		title: 'Qatar: The Next Chapter Hub',
-		desc: 'As it diversifies from its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?',
+		desc: 'As it diversifies its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?',
 		contentType: 'article',
 		publicationDate: '2022-04-12',
 		campaignName: 'Invest Qatar',
@@ -69,13 +69,10 @@ export default function Home({ articleData }) {
 			<HeroImage
 				title={'Qatar: The Next Chapter'}
 				subtitle={
-					'As it diversifies from its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?'
+					'As it diversifies its economy and aspires to become a hub for foreign investors and expats, what does the future look like for the Middle East’s most prosperous nation?'
 				}
 			/>
 			<main className="main" id="content">
-				<ArticleWrapper>
-					<ArticleTitle>Explore our content</ArticleTitle>
-				</ArticleWrapper>
 				<ArticleContainer>
 					{articleData.map((article, i) => {
 						return <ArticleItem key={i} data={article} pos={i} />;

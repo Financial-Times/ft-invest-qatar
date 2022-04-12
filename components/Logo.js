@@ -11,7 +11,9 @@ const LogoImg = styled.img`
 const Logo = () => {
 	return (
 		<Container>
-			<LogoImg src="/images/IqLogo.png" />
+			<a href="https://invest.qa/" rel="noreferrer" target={'_blank'}>
+				<LogoImg src="/images/IqLogo.png" />
+			</a>
 		</Container>
 	);
 };
