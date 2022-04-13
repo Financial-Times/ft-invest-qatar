@@ -55,7 +55,7 @@ export default function Home({ articleData }) {
 		hasVideo: false,
 		videoStyle: 'feature',
 		pageDesignType: 'bespoke',
-		articleImage: 'https://www.ft.com/partnercontent/zenith/poster.jpg',
+		articleImage: 'https://www.ft.com/partnercontent/invest-qatar/A3/hero.jpg',
 		articleUrl: 'https://investqatar.ft.com/',
 	};
 
