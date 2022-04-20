@@ -22,6 +22,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Share from '~/components/Share';
 import Metadata from '~/components/Metadata';
 import Logo from '~/components/Logo';
+import ImageEl from '~/components/ImageEl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +54,7 @@ const ArticleStandFirst = styled.div`
 		font-size: 28px;
 		padding: initial;
 		transform: translateX(70vw);
+		padding: 0 10px;
 	}
 `;
 
@@ -167,6 +169,8 @@ export default function ArticlePage({ post, related }) {
 							return <VideoEl key={el.id} data={el.data} />;
 						case 'cta':
 							return <CTA key={el.id} data={el.data} />;
+						case 'image':
+							return <ImageEl key={el.id} data={el.data} />;
 					}
 				})}
 			</main>

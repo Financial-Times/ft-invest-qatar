@@ -9,7 +9,6 @@ const Container = styled.div`
 
 	@media ${device.tablet} {
 		margin: 96px auto;
-		padding: initial;
 	}
 `;
 
