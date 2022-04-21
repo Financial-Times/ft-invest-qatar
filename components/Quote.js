@@ -126,8 +126,12 @@ const ImageContainer = styled.div`
 const Img = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	object-position: center center;
+
+	@media ${device.tablet} {
+		object-fit: cover;
+	}
 `;
 
 const Quote = ({ data }) => {
