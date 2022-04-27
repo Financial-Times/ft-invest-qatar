@@ -29,16 +29,39 @@ const Container = styled.div`
 const Img = styled.img`
 	object-fit: cover;
 	object-position: center center;
+	&[alt='mobile'] {
+		object-fit: contain;
+		width: 100%;
+	}
+`;
+
+const MobileContainer = styled.div`
+	display: block;
+	@media ${device.tablet} {
+		display: none;
+	}
+`;
+const DesktopContainer = styled.div`
+	display: none;
+
+	@media ${device.tablet} {
+		display: block;
+	}
 `;
 
 const ImageEl = ({ data }) => {
 	return (
 		<Container>
-			<Parallax strength={300}>
-				<Background className="custom-bg">
-					<Img src={data.src} alt="parImage" layout="fill" />
-				</Background>
-			</Parallax>
+			<MobileContainer>
+				<Img src={data.src} alt="mobile" layout="fill" />
+			</MobileContainer>
+			<DesktopContainer>
+				<Parallax strength={300}>
+					<Background className="custom-bg">
+						<Img src={data.src} alt="parImage" layout="fill" />
+					</Background>
+				</Parallax>
+			</DesktopContainer>
 		</Container>
 	);
 };
