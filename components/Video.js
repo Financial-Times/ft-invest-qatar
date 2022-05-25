@@ -79,9 +79,9 @@ const VideoEl = ({ data }) => {
 
 	function permutiveVideo(duration, progress, title, videoId) {
 		console.log(duration, progress, title, videoId);
-		console.log(permutive);
+		console.log(permutive, 'firing');
 		permutive.track('VideoEngagement', {
-			campaign: 'STB',
+			campaign: 'InvestQatar',
 			createdAt: new Date(),
 			duration,
 			title,
