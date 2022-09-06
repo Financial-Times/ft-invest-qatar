@@ -202,7 +202,13 @@ const Related = ({ data }) => {
 						{data.map((slide, i) => (
 							<SwiperSlide key={i}>
 								<RelatedSlide>
-									<Link href={`/article/${slide.id}`}>
+									<Link
+										href={
+											slide.hosted
+												? slide.metaData.articleUrl
+												: `/article/${data.id}`
+										}
+									>
 										<a>
 											<Container>
 												<ImageContainer>
