@@ -279,7 +279,12 @@ const ArticleItem = ({ data, pos }) => {
 					<ContentDesc>{data.metaData.desc}</ContentDesc>
 				</ContentWrapper>
 				<ContentCta>
-					<Link href={`/article/${data.id}`} passHref>
+					<Link
+						href={
+							data.hosted ? data.metaData.articleUrl : `/article/${data.id}`
+						}
+						passHref
+					>
 						<a>{data.metaData.hasVideo ? 'Watch Now' : 'Read More'}</a>
 					</Link>
 				</ContentCta>
