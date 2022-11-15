@@ -15,11 +15,7 @@ function MyApp({ Component, pageProps, router }) {
 		router.events.on('routeChangeComplete', () => {
 			ReactGA.pageview(document.location.href);
 		});
-
-		return () => {
-			router.events.off('routeChangeComplete', ReactGA.pageview(router.asPath));
-		};
-	}, [router]);
+	}, []);
 
 	return (
 		<Layout>
