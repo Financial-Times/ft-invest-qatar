@@ -11,9 +11,8 @@ function MyApp({ Component, pageProps, router }) {
 	}, []);
 
 	useEffect(() => {
-		ReactGA.pageview(document.location.href);
 		router.events.on('routeChangeComplete', () => {
-			ReactGA.pageview(document.location.href);
+			setSite(document.location.href);
 		});
 	}, []);
 
