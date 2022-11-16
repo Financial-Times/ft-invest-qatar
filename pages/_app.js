@@ -10,12 +10,6 @@ function MyApp({ Component, pageProps, router }) {
 		TagManager.initialize({ gtmId: 'GTM-NSHPT4T' });
 	}, []);
 
-	useEffect(() => {
-		router.events.on('routeChangeComplete', () => {
-			setSite(document.location.href);
-		});
-	}, []);
-
 	return (
 		<Layout>
 			<Component {...pageProps} key={router.route} />
