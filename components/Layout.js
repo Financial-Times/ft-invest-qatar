@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
     line-height:2;
   }
   a {
-    color: #00953d;
+    color: #8A1538;
     text-decoration: none;
 
   }

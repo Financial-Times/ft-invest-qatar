@@ -25,6 +25,6 @@ export const device = {
 	desktopL: `(min-width: ${size.desktop})`,
 };
 
-export const ARTICLE_URL = `https://ft.com/partnercontent/invest-qatar/articles.json?ts=${ts}`;
+export const ARTICLE_URL = `https://ft.com/partnercontent/invest-qatar/articles-2024.json?ts=${ts}`;
 export const HOMEPAGE_URL = `https://www.ft.com/partnercontent/ida/homepage.json?ts=${ts}`;
 export const FEATURED_URL = `https://www.ft.com/partnercontent/ida/featured.json?ts=${ts}`;

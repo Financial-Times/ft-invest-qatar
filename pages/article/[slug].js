@@ -12,6 +12,7 @@ import BreadCrumbs from '~/components/Breadcrumbs';
 import ArticleInfo from '~/components/ArticleInfo';
 import Content from '~/components/Content';
 import Quote from '~/components/Quote';
+import QuoteAlt from '~/components/QuoteAlt';
 import PullOut from '~/components/PullOut';
 import VideoEl from '~/components/Video';
 import CTA from '~/components/CTA';
@@ -163,6 +164,8 @@ export default function ArticlePage({ post, related }) {
 							return <Content key={el.id} id={el.id} data={el.data} />;
 						case 'quote':
 							return <Quote key={el.id} data={el.data} id={el.id} />;
+						case 'quotealt':
+							return <QuoteAlt key={el.id} data={el.data} id={el.id} />;
 						case 'pullOut':
 							return <PullOut key={el.id} data={el.data} id={el.id} />;
 						case 'video':
