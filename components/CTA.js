@@ -46,7 +46,7 @@ const CTA = ({ data }) => {
 		<Container>
 			<ContentCta>
 				<a
-					href={'https://invest.qa/'}
+					href={data.url}
 					className="cta"
 					target={'_blank'}
 					rel="noreferrer"
